@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel - Restaurant Menu System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Admin Panel</h1>
+    <!-- The logout button allows the administrator to end the session -->
+    <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+  </header>
+  <main>
+    <section>
+      <h2>Add Menu Item</h2>
+      <!-- Form for adding a new menu item. Fields are required except description -->
+      <form id="itemForm">
+        <label for="itemName">Name</label>
+        <input type="text" id="itemName" placeholder="Item name" required>
+
+        <label for="itemDesc">Description</label>
+        <textarea id="itemDesc" rows="3" placeholder="Item description (optional)"></textarea>
+
+        <label for="itemPrice">Price</label>
+        <input type="number" id="itemPrice" placeholder="Item price" step="0.01" min="0" required>
+
+        <button type="submit" class="btn">Add Item</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Manage Menu</h2>
+      <!-- Table listing all menu items -->
+      <table id="itemsTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rows are populated via JavaScript -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <script src="admin.js"></script>
+</body>
+</html>

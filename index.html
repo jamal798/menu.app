@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Restaurant Menu System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Restaurant Menu System</h1>
+  </header>
+  <main>
+    <div class="login-container">
+      <h2>Admin Login</h2>
+      <!-- Login form. We use a form element so that the browser can manage
+           required fields for us. The JavaScript intercepts the submit event. -->
+      <form id="loginForm">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter username" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password" required>
+
+        <button type="submit" class="btn">Login</button>
+        <!-- Error message is hidden by default and shown when authentication fails -->
+        <p id="error" class="error-message"></p>
+      </form>
+    </div>
+  </main>
+  <script src="login.js"></script>
+</body>
+</html>
